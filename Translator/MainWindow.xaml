@@ -1,0 +1,39 @@
+﻿<Window x:Class="Translator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Jean's Translator" Height="350" Width="525"
+        Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="10" Name="TxtBoxFrom"   TabIndex="0" Grid.Row="0" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" />
+        <TextBox  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Name="TxtBoxTo"   TabIndex="2" Grid.Row="2" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" AcceptsReturn="True"/>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                
+            </Grid.ColumnDefinitions>
+            <Button Content="Translate"  Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" Margin="10" Name="BtnTranslate" VerticalAlignment="Top" TabIndex="1" Click="BtnTranslate_Click" />
+            <Label Content="from" Height="28" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Margin="10" Name="label1" VerticalAlignment="Top" />
+            <ComboBox Height="23" HorizontalAlignment="Stretch" Margin="10" Name="CmbBoxFrom" VerticalAlignment="Top"  Grid.Row="0" Grid.Column="2" />
+            <Label Content="to" Height="28" HorizontalAlignment="Left" Margin="10" Name="label2" VerticalAlignment="Top" Grid.Row="0" Grid.Column="3"  />
+            <ComboBox Height="23" HorizontalAlignment="Stretch" Margin="10" Name="CmbBoxTo" VerticalAlignment="Top"  Grid.Row="0" Grid.Column="4"  />
+
+            <Button Content="&lt;- Switch -&gt;"  Height="23" HorizontalAlignment="Center" Margin="10" Name="BtnSwitch" Click="BtnSwitch_Click" VerticalAlignment="Center" Width="75" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4"  />
+            <CheckBox Content="On top?" Height="16" HorizontalAlignment="Center" Margin="10" Name="ChkBoxOnTop" VerticalAlignment="Center" Click="ChkBoxOnTop_Checked" Grid.Row="1" Grid.Column="4" />
+        </Grid>
+
+    </Grid>
+</Window>
